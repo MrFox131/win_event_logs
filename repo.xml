@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta 
+  xmlns="http://exist-db.org/xquery/repo">
+  <description>My amazing logsystem application</description>
+  <author>MrNansy</author>
+  <website>http://exist-db.org</website>
+  <status>alpha</status>
+  <license>unlicense</license>
+  <copyright>true</copyright>
+  <type>application</type>
+  <target>logsys</target>
+  <prepare>pre-install.xql</prepare>
+  <finish>post-install.xql</finish>
+</meta>
