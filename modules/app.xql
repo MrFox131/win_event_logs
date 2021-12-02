@@ -35,4 +35,10 @@ declare function app:test($node as node(), $model as map(*)) {
         function was triggered by the class attribute <code>class="app:test"</code>.</p>
 };
 
+declare function app:file_upload_result($node as node(), $model as map(*)) {
+    let $collection := '/db/apps/logsys/events'
+    let $filename := request:get-uploaded-file-name('file')
+    return
+    <p>File {$filename} uploaded successfully</p>
 
+};
