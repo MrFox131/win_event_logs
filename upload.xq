@@ -11,7 +11,7 @@ return
     <p>File {$filename} uploaded successfully:
         {
             for $event in ($xml/Events/*)
-                let $hui := xmldb:store($collection_uri, $event/System/EventID, $event)
-                return $event
+                let $result := xmldb:store($collection_uri, $event/System/EventID, $event)
+                return ''
         }
     </p>
