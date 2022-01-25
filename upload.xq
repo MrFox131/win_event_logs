@@ -5,7 +5,8 @@ let $xml := document{fn:parse-xml(util:binary-to-string(request:get-uploaded-fil
 let $login := xmldb:login($collection_uri, 'admin', '')
 let $created_collection := xmldb:create-collection('/db/apps/logsys/', 'events')
 let $avail := xmldb:collection-available('/db/apps/logsys/events')
-
+let $headers :=  response:set-header("Access-Control-Allow-Origin", "*")
+let $headers2 := response:set-header("Access-Control-Allow-Headers", "origin, x-requested-with, content-type")
 
 return
     <result>
